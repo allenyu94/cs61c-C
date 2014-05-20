@@ -1,0 +1,42 @@
+float min_dist = FLT_MAX;
+    float *curr_dist;
+    cudaMalloc(&curr_dist, 1 * sizeof(float));
+	int x_offset = i_width - t_width + 1;
+	int y_offset = i_height - t_width + 1;
+	int flip = 0;
+
+    int threads_per_block = 512; // set to the max possible
+
+    // set an initial number of blocks_per_grid
+    int blocks_per_grid = ((t_width * t_width) / threads_per_block) + 1;  
+
+	while (flip < 2) {
+		for (int rotate = 0; rotate < 4; rotate++) {
+			for (int y_off = 0; y_off < y_offset; y_off++) {
+				for (int x_off = 0; x_off < x_offset; x_off++) {
+
+                    // create 3-dim vector objects to initialize values
+                    dim3 dim_blocks_per_grid(blocks_per_grid, 1);
+                    dim3 dim_threads_per_block(threads_per_block, 1, 1);
+
+                    // launch kernel on GPU
+                    calc_min_dist_kernel<<<dim_blocks_per_grid, dim_threads_per_block>>>(curr_dist, temp, image, t_width);
+
+                    // wait for GPU to finish computation
+                    cudaThreadSynchronize();
+
+                    // debugging sanity.
+                    CUT_CHECK_ERROR("");
+                    
+					if (curr_dist[0] < min_dist) {
+						min_dist = curr_dist[0];
+					}
+					curr_dist[0] = 0;
+				}
+			}
+			rotate_ccw_90(temp, t_width);
+		}
+		flip_horizontal(temp, t_width);
+		flip++;
+	}
+    return min_dist;

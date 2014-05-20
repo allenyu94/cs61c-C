@@ -1,0 +1,24 @@
+PROJECT 4 WRITE-UP
+------------------
+
+1) Briefly explain how you implemented comparison queries and how they affected your control block's signals (in a few sentences).
+
+If I am doing a comparison in ALU, then I would send the 8 bits corresponding to the 8 different comparisons to the comparison control. Depending on the comparison request, I would select from the 8 bits and return true or false. 
+
+2) Please list your control block's control signals, and briefly explain what each one does (in a sentence or less each).
+
+jump?: jump inst. if this is on.
+link?: link inst. if this is on.
+reg write?: write back to registers if this is on.
+memwrite?: write to memory if this is on.
+load?: load from memory if this is on.
+comp?: comparison inst. if this is on.
+
+3) What features (if any) of this assembly language do you like?
+
+I liked the fact that there weren’t any branch instructions and we just needed the comparison values to determine it. Makes it easy to put everything together.
+
+4) What features (if any) of this assembly language do you not like?
+
+None. Self explanatory and easy language to implement.
+

@@ -1,0 +1,16 @@
+Partner 1 name: Chung-Hao Yu
+Partner 1 login: cs61c-se
+Partner 2 name: Andrew Wong
+Partner 2 login: cs61c-sf
+
+CS61C Spring 2014 Project 1-2 Task A Writeup
+
+1. Which version (iterative or recursive) executed more instructions, and why? Please answer in 1-2 sentences.
+
+	recursive instructions for input 29: 382
+	iterative instructions for input 29: 204
+
+	 
+
+
+

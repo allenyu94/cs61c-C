@@ -1,0 +1,29 @@
+    ADD %s1, %zero, 1
+    ADD %s2, %zero, %zero
+    CMPU %s2, %zero
+
+    ADD ?NO %rv, %zero, 1 # testing ?NO case, %rv should be 0
+    ADD ?LE %ra, %zero, 2 # testing ?LE case, %ra should be 2
+
+    CMPS %s1, -1
+
+    ADD ?GT %a0, %zero, 3 # testing ?GT case, %a0 should be 3
+
+    ADD %s1, %zero, -1 # testing that if you change %s1 after CMPS, doesnt change %cr
+
+    ADD ?NE %a1, %zero, 4 # testing ?NE case, %a1 should be 4
+
+    ADD %s1, %s1, -1 
+    CMPS %s1, -2 
+
+    ADD ?EQ %t0, %zero, 5 # testing ?EQ case, %t0 should be 5
+    ADD ?GE %t1, %zero, 6 # testing ?GE case, %t1 should be 6
+
+    ADD %s1, %zero, 1    
+    CMPU %zero, 2
+    CMPS %s1, %s2 # testing if you use the most recent %cr
+
+    ADD ?LT %t2, %zero, 7 # testing ?LT case, %t2 should be 0
+    ADD ?OK %t3, %zero, 8 # testing ?OK case, %t3 should be 8
+    HALT
+    

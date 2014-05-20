@@ -1,0 +1,20 @@
+    ADD %s0, %zero, 1
+    ADD %s1, %zero, 2
+    ADD %s2, %zero, 3
+
+    SAVE %s0, %s1, %s2 # data: 1, addr: 5
+    SAVE %s1, %s0, %s2 # data: 2, addr: 4
+    SAVE %s2, %s0, %s1 # data: 3, addr: 3
+    SAVE %s0, %s0, %s0 # data: 1, addr: 2
+    SAVE %s1, %zero, 1 # data: 2, addr: 1
+    SAVE %s2, %zero, %zero # data: 3, addr: 0
+
+    LOAD %t0, %s1, %s2 # %t0 should be 1
+    LOAD %t1, %s0, %s2 # %t1 should be 2
+    LOAD %t2, %s0, %s1 # %t2 should be 3
+    LOAD %t3, %s0, %s0 # %t3 should be 1
+    LOAD %t4, %zero, 1 # %t4 should be 2
+    LOAD %t5, %zero, %zero # %t5 should be 3
+
+
+    HALT

@@ -1,0 +1,13 @@
+ONE:    ADD %t0, %zero, 1
+        LINK @TWO
+        JUMP @THREE
+
+
+TWO:    ADD %t0, %t0, 1
+        JUMP @DONE
+
+
+THREE: ADD %t0, %t0, 100
+       JUMP %ra
+
+DONE: 

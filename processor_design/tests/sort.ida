@@ -1,0 +1,29 @@
+        COPY %a0 0    # pointer to the 1st element
+        COPY %a1 10 # number of elements to sort
+        CALL @SORT  
+        HALT
+        
+SORT:   ADD %s1, %zero, 0
+        ADD %s2, %zero, 1
+        ADD %s0, %a0, 0
+
+LOOP:   LOAD %t1, %s0, 0
+        LOAD %t2, %s0, 1
+        CMPS %t2, %t1
+        JUMP ?GT @NoSwap
+        
+        SAVE %t2, %s0, 0
+        SAVE %t1, %s0, 1
+        ADD %s1, %zero, 1
+
+NoSwap: ADD %s0, %s0, 1
+        ADD %s2, %s2, 1
+        CMPS %a1, %s2
+        JUMP ?EQ @LastIndex
+        JUMP @LOOP
+
+LastIndex:  CMPS %s1, %zero
+            JUMP ?EQ @Done
+            JUMP @SORT
+
+Done:   JUMP %ra

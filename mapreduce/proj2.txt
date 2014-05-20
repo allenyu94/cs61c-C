@@ -1,0 +1,28 @@
+1. 
+6 cluster:
+TIME: 53:45
+NUM_MAPPERS: 148
+NUM_REDUCERS: 51
+HDFS_BYTES_READ: 3,193,935,120
+———————————————————————————————
+9 cluster:
+TIME: 52:04
+NUM_MAPPERS: 148
+NUM_REDUCERS: 51
+HDFS_BYTES_READ: 3,193,935,236
+———————————————————————————————
+12 cluster:
+TIME: 52:57
+NUM_MAPPERS: 148
+NUM_REDUCERS: 51
+HDFS_BYTES_READ: 3,193,935,354
+
+2. 6 clusters: 1.89 MB/s, 9 clusters: 1.95 MB/s, 12 clusters: 1.92 MB/s
+3. 9 clusters: 1.03 times speedup. 12 clusters: 1.02 times speedup. Both these speedups are relative to the 6 instance cluster. Hadoop seems to not have parallelized my work extremely well as there was not a significant improvement in the runtime with increased number of clusters. This would assume that hadoop is weak scaling meaning that it can solve large problems in a reasonable amount of time rather than speeding up the process of a problem of constant size.
+4. InitMoves: no, there is no need to compress because we are just making the empty state.
+   Possible Moves: yes, the combiner would decrease the number of outputs to reducer as there may be multiple times when the map function creates the same possible move which would be redundant. The combiner would compress all these similar states so that less output would be sent to the reducer.
+   SolveMoves: no, there is no new information, it is simply setting up the information being sent to the reducer. There is no redundant information that can be compressed.
+   FinalMoves: no, simply just reformatting the information. There is no redundant information that can be compressed.
+   
+5. 6 clusters: $0.687/GB, 9 clusters: $1.03/GB, 12 clusters: $1.37/GB
+6. I spent (6 + 9 + 12) * $0.68 * 1 = $18.36 to complete this project.

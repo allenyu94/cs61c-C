@@ -1,0 +1,44 @@
+flip-rotate-translate-check:
+N=128 M=128 T=64 	0.6509 Gflop/s
+N=128 M=128 T=64 	0.6513 Gflop/s
+N=128 M=128 T=64 	0.6515 Gflop/s
+N=128 M=128 T=64 	0.6497 Gflop/s
+N=128 M=128 T=64 	0.6513 Gflop/s
+Testing with other sizes...
+N=512 M=511 T=510 	0.6165 Gflop/s
+N=384 M=360 T=355 	0.6478 Gflop/s
+N=171 M=171 T=143 	0.6488 Gflop/s
+
+translate-flip-rotate-check:
+N=128 M=128 T=64 	0.5159 Gflop/s
+N=128 M=128 T=64 	0.5159 Gflop/s
+N=128 M=128 T=64 	0.5159 Gflop/s
+N=128 M=128 T=64 	0.5160 Gflop/s
+N=128 M=128 T=64 	0.5161 Gflop/s
+Testing with other sizes...
+N=512 M=511 T=510 	0.4934 Gflop/s
+N=384 M=360 T=355 	0.4943 Gflop/s
+N=171 M=171 T=143 	0.5120 Gflop/s
+
+translate-rotate-flip-check:
+N=128 M=128 T=64 	0.5173 Gflop/s
+N=128 M=128 T=64 	0.4642 Gflop/s
+N=128 M=128 T=64 	0.5174 Gflop/s
+N=128 M=128 T=64 	0.5174 Gflop/s
+N=128 M=128 T=64 	0.5173 Gflop/s
+Testing with other sizes...
+N=512 M=511 T=510 	0.5013 Gflop/s
+N=384 M=360 T=355 	0.5016 Gflop/s
+N=171 M=171 T=143 	0.4738 Gflop/s
+
+rotate-flip-translate-check:
+N=128 M=128 T=64 	0.6514 Gflop/s
+N=128 M=128 T=64 	0.6515 Gflop/s
+N=128 M=128 T=64 	0.6514 Gflop/s
+N=128 M=128 T=64 	0.6515 Gflop/s
+N=128 M=128 T=64 	0.6503 Gflop/s
+Testing with other sizes...
+N=512 M=511 T=510 	0.6189 Gflop/s
+N=384 M=360 T=355 	0.6476 Gflop/s
+N=171 M=171 T=143 	0.6490 Gflop/s
+

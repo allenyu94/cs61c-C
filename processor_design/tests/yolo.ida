@@ -1,0 +1,62 @@
+    ADD %s1, %zero, 1
+    ADD %s2, %zero, %zero
+    CMPU %s2, %zero
+
+    ADD ?NO %rv, %zero, 1 # testing ?NO case, %rv should be 0
+    ADD ?LE %ra, %zero, 2 # testing ?LE case, %ra should be 2
+
+    CMPS %s1, -1
+
+    ADD ?GT %a0, %zero, 3 # testing ?GT case, %a0 should be 3
+
+    ADD %s1, %zero, -1 # testing that if you change %s1 after CMPS, doesnt change %cr
+
+    ADD ?NE %a1, %zero, 4 # testing ?NE case, %a1 should be 4
+
+    ADD %s1, %s1, -1 
+    CMPS %s1, -2 
+
+    ADD ?EQ %t0, %zero, 5 # testing ?EQ case, %t0 should be 5
+    ADD ?GE %t1, %zero, 6 # testing ?GE case, %t1 should be 6
+
+    ADD %s1, %zero, 1    
+    CMPU %zero, 2
+    CMPS %s1, %s2 # testing if you use the most recent %cr
+
+    ADD ?LT %t2, %zero, 7 # testing ?LT case, %t2 should be 0
+    ADD ?OK %t3, %zero, 8 # testing ?OK case, %t3 should be 8
+   
+ONE:    ADD %t0, %zero, 1
+        LINK @TWO
+        JUMP @THREE
+
+
+TWO:    ADD %t0, %t0, 1
+        JUMP @DONE
+
+
+THREE:  ADD %t0, %t0, 100
+        JUMP %ra
+
+DONE:  
+
+    ADD %s0, %zero, 1
+    ADD %s1, %zero, 2
+    ADD %s2, %zero, 3
+
+    SAVE %s0, %s1, %s2 # data: 1, addr: 5
+    SAVE %s1, %s0, %s2 # data: 2, addr: 4
+    SAVE %s2, %s0, %s1 # data: 3, addr: 3
+    SAVE %s0, %s0, %s0 # data: 1, addr: 2
+    SAVE %s1, %zero, 1 # data: 2, addr: 1
+    SAVE %s2, %zero, %zero # data: 3, addr: 0
+
+    LOAD %t0, %s1, %s2 # %t0 should be 1
+    LOAD %t1, %s0, %s2 # %t1 should be 2
+    LOAD %t2, %s0, %s1 # %t2 should be 3
+    LOAD %t3, %s0, %s0 # %t3 should be 1
+    LOAD %t4, %zero, 1 # %t4 should be 2
+    LOAD %t5, %zero, %zero # %t5 should be 3
+
+HALT
+

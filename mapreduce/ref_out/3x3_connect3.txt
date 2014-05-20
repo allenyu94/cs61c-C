@@ -1,0 +1,693 @@
+'      X  '	35
+'      XO '	30
+'      XOX'	27
+'   O  X  '	30
+'   O  XX '	26
+'   O  XXO'	22
+'   O  XOX'	22
+'   X     '	35
+'   X  O  '	30
+'   X  XO '	26
+'   X  OX '	27
+'   X  XOO'	6
+'   X  OXO'	23
+'   OO XX '	6
+'   OO XXX'	2
+'   XO    '	31
+'   XO X  '	27
+'   XO XO '	6
+'   XO OX '	23
+'   XO XOX'	19
+'   XO OXX'	19
+'   OX X  '	26
+'   OX XO '	22
+'   OX XXO'	18
+'   OX XOX'	18
+'   XX O  '	26
+'   XX OO '	6
+'   XX XOO'	10
+'   XX OXO'	19
+'   XX OOX'	10
+'   XOOX  '	6
+'   XOOXX '	10
+'   XOOXXO'	6
+'   XOOXOX'	6
+'   XOOOXX'	15
+'   OXOX  '	14
+'   OXOXX '	18
+'   OXOXXO'	14
+'   OXOXOX'	6
+'   XXOO  '	22
+'   XXOOX '	19
+'   XXOXOO'	6
+'   XXOOXO'	15
+'   XXOOOX'	6
+'   OOXXX '	19
+'   OOXXXO'	15
+'   XOX   '	27
+'   XOXO  '	23
+'   XOXXO '	13
+'   XOXOX '	19
+'   XOXXOO'	6
+'   XOXOXO'	15
+'   OXXXO '	18
+'   OXXXOO'	14
+'   XXXOO '	2
+'O     X  '	31
+'O     XX '	21
+'O     XXO'	17
+'O     XOX'	23
+'O  O  XX '	6
+'O  O  XXX'	2
+'O  X     '	30
+'O  X  X  '	21
+'O  X  XO '	22
+'O  X  OX '	14
+'O  X  XXO'	5
+'O  X  XOX'	13
+'O  X  OXX'	18
+'O  XO X  '	23
+'O  XO XX '	5
+'O  XO XXO'	1
+'O  XO XOX'	15
+'O  XO OXX'	14
+'O  OX X  '	14
+'O  OX XX '	10
+'O  OX XXO'	6
+'O  OX XOX'	14
+'O  XX    '	26
+'O  XX O  '	6
+'O  XX XO '	18
+'O  XX OX '	10
+'O  XX XOO'	6
+'O  XX OXO'	6
+'O  XX OOX'	6
+'O  XOOXX '	6
+'O  XOOXXX'	2
+'O  OXOXX '	6
+'O  OXOXXX'	2
+'O  XXO   '	22
+'O  XXOX  '	18
+'O  XXOXO '	14
+'O  XXOOX '	6
+'O  XXOXOX'	10
+'O  XXOOXX'	11
+'O  OOXXX '	6
+'O  OOXXXX'	2
+'O  XOX   '	23
+'O  XOXX  '	13
+'O  XOXXO '	9
+'O  XOXOX '	14
+'O  XOXXOX'	5
+'O  XOXOXX'	10
+'O  OXXX  '	18
+'O  OXXXO '	14
+'O  OXXXXO'	10
+'O  OXXXOX'	10
+'O  XXXO  '	2
+'O  XXXXOO'	2
+'O  XXXOXO'	2
+'O  XXXOOX'	2
+'X        '	35
+'X     O  '	31
+'X     XO '	26
+'X     OX '	27
+'X     XOO'	6
+'X     OXO'	23
+'X  O     '	30
+'X  O  X  '	27
+'X  O  XO '	22
+'X  O  OX '	14
+'X  O  XXO'	19
+'X  O  XOX'	13
+'X  O  OXX'	18
+'X  X  O  '	21
+'X  X  OO '	17
+'X  X  XOO'	2
+'X  X  OXO'	19
+'X  X  OOX'	13
+'X  OO X  '	23
+'X  OO XX '	5
+'X  OO XXO'	15
+'X  OO XOX'	9
+'X  OO OXX'	14
+'X  XO    '	27
+'X  XO O  '	23
+'X  XO XO '	2
+'X  XO OX '	19
+'X  XO OXO'	15
+'X  XO OOX'	9
+'X  OX    '	26
+'X  OX O  '	14
+'X  OX XO '	18
+'X  OX OX '	10
+'X  OX XOO'	14
+'X  OX OXO'	6
+'X  XX OO '	5
+'X  XX OOO'	1
+'X  OOOXX '	1
+'X  XOO   '	6
+'X  XOOX  '	2
+'X  XOOOX '	15
+'X  XOOXXO'	2
+'X  XOOXOX'	2
+'X  XOOOXX'	11
+'X  OXO   '	14
+'X  OXOX  '	10
+'X  OXOXO '	6
+'X  OXOOX '	6
+'X  OXOXXO'	10
+'X  OXOXOX'	2
+'X  OXOOXX'	2
+'X  XXOO  '	18
+'X  XXOOO '	6
+'X  XXOXOO'	2
+'X  XXOOXO'	11
+'X  XXOOOX'	2
+'X  OOXX  '	19
+'X  OOXXO '	15
+'X  OOXXXO'	11
+'X  OOXXOX'	5
+'X  OOXOXX'	10
+'X  XOXO  '	13
+'X  XOXOO '	9
+'X  XOXXOO'	2
+'X  XOXOXO'	11
+'X  XOXOOX'	5
+'X  OXXO  '	18
+'X  OXXOO '	6
+'X  OXXXOO'	10
+'X  OXXOXO'	11
+'X  OXXOOX'	2
+'OO    XX '	6
+'OO    XXX'	2
+'OO X  X  '	17
+'OO X  XX '	5
+'OO X  XXO'	9
+'OO X  XOX'	9
+'OO X  OXX'	14
+'OO XO XX '	6
+'OO XO XXX'	2
+'OO OX XX '	6
+'OO OX XXX'	2
+'OO XX    '	6
+'OO XX X  '	5
+'OO XX XO '	6
+'OO XX OX '	6
+'OO XX XXO'	5
+'OO XX XOX'	5
+'OO XX OXX'	5
+'OO XXOX  '	6
+'OO XXOXX '	5
+'OO XXOXXO'	6
+'OO XXOXOX'	6
+'OO XXOOXX'	7
+'OO XOXX  '	9
+'OO XOXXX '	5
+'OO XOXXXO'	1
+'OO XOXXOX'	1
+'OO XOXOXX'	6
+'OO OXXX  '	6
+'OO OXXXX '	5
+'OO OXXXXO'	6
+'OO OXXXOX'	6
+'OO XXX   '	2
+'OO XXXXO '	2
+'OO XXXOX '	2
+'XO       '	30
+'XO    X  '	26
+'XO    XO '	6
+'XO    OX '	23
+'XO    XOX'	10
+'XO    OXX'	13
+'XO O  X  '	22
+'XO O  XX '	19
+'XO O  XXO'	15
+'XO O  XOX'	6
+'XO O  OXX'	6
+'XO X     '	26
+'XO X  O  '	22
+'XO X  XO '	2
+'XO X  OX '	19
+'XO X  OXO'	15
+'XO X  OOX'	6
+'XO OO XX '	6
+'XO OO XXX'	2
+'XO XO    '	6
+'XO XO X  '	2
+'XO XO OX '	15
+'XO XO OXX'	5
+'XO OX    '	22
+'XO OX X  '	18
+'XO OX XO '	6
+'XO OX OX '	6
+'XO OX XXO'	11
+'XO OX XOX'	2
+'XO OX OXX'	2
+'XO XX O  '	18
+'XO XX OO '	6
+'XO XX OXO'	11
+'XO XX OOX'	2
+'XO XOOOXX'	7
+'XO OXOX  '	6
+'XO OXOXX '	10
+'XO OXOXXO'	6
+'XO XXOO  '	14
+'XO XXOOX '	11
+'XO XXOOXO'	7
+'XO OOXX  '	15
+'XO OOXXX '	11
+'XO OOXXXO'	7
+'XO OOXXOX'	1
+'XO OOXOXX'	6
+'XO XOX   '	13
+'XO XOXO  '	9
+'XO XOXOX '	5
+'XO XOXOXO'	7
+'XO XOXOOX'	1
+'XO OXX   '	18
+'XO OXXO  '	14
+'XO OXXXO '	10
+'XO OXXOX '	11
+'XO OXXXOO'	6
+'XO OXXOXO'	7
+'XO XXXOO '	2
+'OX    X  '	27
+'OX    XO '	23
+'OX    XXO'	13
+'OX    XOX'	19
+'OX O  X  '	14
+'OX O  XX '	10
+'OX O  XXO'	6
+'OX O  XOX'	14
+'OX X     '	27
+'OX X  O  '	14
+'OX X  XO '	19
+'OX X  OX '	13
+'OX X  XOO'	14
+'OX X  OXO'	6
+'OX OO XX '	6
+'OX OO XXX'	2
+'OX XO    '	23
+'OX XO X  '	19
+'OX XO XO '	15
+'OX XO OX '	9
+'OX XO XOX'	11
+'OX XO OXX'	5
+'OX OX X  '	10
+'OX OX XO '	6
+'OX OX XXO'	2
+'OX OX XOX'	11
+'OX XX O  '	10
+'OX XX OO '	6
+'OX XX XOO'	10
+'OX XX OXO'	2
+'OX XX OOX'	11
+'OX XOOX  '	15
+'OX XOOXX '	5
+'OX XOOXXO'	1
+'OX XOOXOX'	7
+'OX XOOOXX'	7
+'OX OXOX  '	6
+'OX OXOXX '	2
+'OX OXOXOX'	6
+'OX XXO   '	19
+'OX XXOO  '	6
+'OX XXOXO '	11
+'OX XXOOX '	2
+'OX XXOXOO'	6
+'OX XXOOOX'	7
+'OX OOXXX '	5
+'OX OOXXXO'	1
+'OX XOX   '	19
+'OX XOXO  '	14
+'OX XOXXO '	5
+'OX XOXOX '	5
+'OX XOXXOO'	1
+'OX XOXOXO'	1
+'OX OXXXO '	11
+'OX OXXXOO'	6
+'OX XXXOO '	2
+'XX    O  '	21
+'XX    OO '	6
+'XX    XOO'	10
+'XX    OXO'	13
+'XX    OOX'	13
+'XX O     '	26
+'XX O  O  '	6
+'XX O  XO '	19
+'XX O  OX '	10
+'XX O  XOO'	6
+'XX O  OXO'	6
+'XX O  OOX'	6
+'XX X  OO '	5
+'XX X  OOO'	1
+'XX OO    '	6
+'XX OO X  '	5
+'XX OO XO '	6
+'XX OO OX '	6
+'XX OO XXO'	5
+'XX OO XOX'	5
+'XX OO OXX'	5
+'XX XO O  '	5
+'XX XO OO '	6
+'XX XO OXO'	5
+'XX XO OOX'	5
+'XX OX O  '	10
+'XX OX OO '	6
+'XX OX XOO'	11
+'XX OX OXO'	2
+'XX OX OOX'	2
+'XX OOOX  '	1
+'XX OOOXXO'	1
+'XX OOOXOX'	1
+'XX OOOOXX'	1
+'XX XOO   '	10
+'XX XOOO  '	6
+'XX XOOOX '	5
+'XX XOOOXO'	6
+'XX XOOOOX'	6
+'XX OXO   '	18
+'XX OXOO  '	6
+'XX OXOXO '	10
+'XX OXOOX '	2
+'XX OXOXOO'	6
+'XX XXOOO '	5
+'XX XXOOOO'	1
+'XX OOX   '	19
+'XX OOXO  '	6
+'XX OOXXO '	11
+'XX OOXOX '	5
+'XX OOXXOO'	6
+'XX OOXOXO'	6
+'XX XOXOO '	5
+'XX XOXOOO'	1
+'XX OXXOO '	5
+'XX OXXOOO'	1
+'OOOX  XX '	1
+'OOOXX X  '	1
+'OOOXX XXO'	1
+'OOOXX XOX'	1
+'OOOXX OXX'	1
+'OOOXXOXX '	1
+'OOOXOXXX '	1
+'OOOOXXXX '	1
+'XOO   X  '	6
+'XOO   XX '	10
+'XOO   XXO'	6
+'XOO   XOX'	6
+'XOO   OXX'	9
+'XOOO  XX '	6
+'XOOO  XXX'	2
+'XOOX     '	6
+'XOOX  X  '	2
+'XOOX  OX '	14
+'XOOX  XXO'	2
+'XOOX  XOX'	2
+'XOOX  OXX'	5
+'XOOXO OXX'	1
+'XOOOX X  '	14
+'XOOOX XX '	11
+'XOOOX XXO'	7
+'XOOXX    '	10
+'XOOXX O  '	6
+'XOOXX OX '	10
+'XOOXX OXO'	6
+'XOOOXOXX '	6
+'XOOOXOXXX'	2
+'XOOXXO   '	6
+'XOOXXOX  '	2
+'XOOXXOOX '	6
+'XOOXXOOXX'	2
+'XOOOOXXX '	6
+'XOOOOXXXX'	2
+'XOOXOX   '	6
+'XOOXOXX  '	2
+'XOOXOXOX '	1
+'XOOOXX   '	14
+'XOOOXXX  '	10
+'XOOOXXXO '	6
+'XOOOXXOX '	6
+'XOOOXXXXO'	3
+'XOOOXXXOX'	2
+'XOOOXXOXX'	2
+'XOOXXXO  '	2
+'XOOXXXOXO'	2
+'OXO   X  '	23
+'OXO   XX '	13
+'OXO   XXO'	9
+'OXO   XOX'	15
+'OXOO  XX '	6
+'OXOO  XXX'	2
+'OXOX     '	23
+'OXOX  X  '	19
+'OXOX  XO '	15
+'OXOX  OX '	6
+'OXOX  XXO'	5
+'OXOX  XOX'	11
+'OXOX  OXX'	5
+'OXOXO X  '	15
+'OXOXO XX '	5
+'OXOXO XXO'	1
+'OXOXO XOX'	7
+'OXOXO OXX'	1
+'OXOOX X  '	6
+'OXOOX XX '	2
+'OXOOX XOX'	7
+'OXOXX    '	19
+'OXOXX O  '	6
+'OXOXX XO '	11
+'OXOXX OX '	2
+'OXOXX XOO'	6
+'OXOXX OOX'	6
+'OXOXOOXX '	6
+'OXOXOOXXX'	2
+'OXOXXO   '	15
+'OXOXXOX  '	11
+'OXOXXOXO '	7
+'OXOXXOXOX'	3
+'OXOOOXXX '	6
+'OXOOOXXXX'	2
+'OXOXOX   '	15
+'OXOXOXX  '	11
+'OXOXOXXO '	7
+'OXOXOXOX '	1
+'OXOXOXXOX'	3
+'OXOOXXX  '	11
+'OXOOXXXO '	7
+'OXOOXXXOX'	3
+'OXOXXXO  '	2
+'OXOXXXXOO'	2
+'OXOXXXOOX'	2
+'XXO   O  '	17
+'XXO   OX '	13
+'XXO   XOO'	6
+'XXO   OXO'	9
+'XXO   OOX'	9
+'XXOO     '	22
+'XXOO  X  '	19
+'XXOO  XO '	15
+'XXOO  OX '	6
+'XXOO  XOX'	11
+'XXOO  OXX'	5
+'XXOX  O  '	5
+'XXOX  OO '	9
+'XXOX  XOO'	2
+'XXOX  OXO'	5
+'XXOX  OOX'	5
+'XXOOO X  '	15
+'XXOOO XX '	5
+'XXOOO XXO'	7
+'XXOOO XOX'	7
+'XXOOO OXX'	1
+'XXOXO O  '	1
+'XXOXO OXO'	1
+'XXOXO OOX'	1
+'XXOOX    '	18
+'XXOOX O  '	6
+'XXOOX XO '	11
+'XXOOX OX '	2
+'XXOOX XOO'	7
+'XXOXX OO '	5
+'XXOXX OOO'	1
+'XXOOOOXX '	1
+'XXOXOO   '	6
+'XXOXOOX  '	2
+'XXOXOOOX '	1
+'XXOOXO   '	14
+'XXOOXOX  '	10
+'XXOOXOXO '	6
+'XXOOXOXOX'	2
+'XXOXXOOO '	6
+'XXOXXOOOX'	2
+'XXOOOX   '	15
+'XXOOOXX  '	11
+'XXOOOXXO '	7
+'XXOOOXOX '	1
+'XXOOOXXXO'	3
+'XXOOOXXOX'	3
+'XXOXOXOO '	1
+'XXOOXXO  '	10
+'XXOOXXOO '	6
+'XXOOXXXOO'	3
+'XXOOXXOOX'	2
+'OOX   XX '	13
+'OOX   XXO'	9
+'OOXO  XX '	6
+'OOXO  XXX'	2
+'OOXX  X  '	13
+'OOXX  XO '	6
+'OOXX  XXO'	5
+'OOXX  XOX'	5
+'OOXX  OXX'	10
+'OOXXO X  '	9
+'OOXXO XX '	5
+'OOXXO XXO'	1
+'OOXXO XOX'	1
+'OOXXO OXX'	6
+'OOXOX XX '	2
+'OOXXX    '	10
+'OOXXX O  '	6
+'OOXXX XO '	2
+'OOXXX OX '	11
+'OOXXX OXO'	6
+'OOXXOOXX '	6
+'OOXXOOXXX'	2
+'OOXXXO   '	6
+'OOXXXOX  '	2
+'OOXXXOOX '	7
+'OOXXXOXXO'	2
+'OOXXXOXOX'	2
+'OOXXXOOXX'	3
+'OOXXOXX  '	5
+'OOXXOXXO '	1
+'OOXXOXOXX'	2
+'OOXOXXX  '	2
+'OOXOXXXXO'	2
+'OOXOXXXOX'	2
+'OOXXXXO  '	2
+'OOXXXXOXO'	2
+'XOX      '	27
+'XOX   O  '	23
+'XOX   XO '	10
+'XOX   OX '	19
+'XOX   XOO'	6
+'XOX   OXO'	15
+'XOXO     '	22
+'XOXO  X  '	13
+'XOXO  XO '	6
+'XOXO  OX '	14
+'XOXO  XXO'	11
+'XOXO  XOX'	5
+'XOXO  OXX'	10
+'XOXX  O  '	13
+'XOXX  OO '	9
+'XOXX  XOO'	2
+'XOXX  OXO'	11
+'XOXX  OOX'	5
+'XOXOO X  '	9
+'XOXOO XX '	5
+'XOXOO XXO'	7
+'XOXOO XOX'	1
+'XOXOO OXX'	6
+'XOXXO    '	19
+'XOXXO O  '	15
+'XOXXO OX '	11
+'XOXXO OXO'	7
+'XOXXO OOX'	1
+'XOXOX    '	18
+'XOXOX O  '	14
+'XOXOX XO '	2
+'XOXOX OX '	11
+'XOXOX OXO'	7
+'XOXXX OO '	5
+'XOXXX OOO'	1
+'XOXOOOXX '	1
+'XOXXOO   '	6
+'XOXXOOX  '	2
+'XOXXOOOX '	7
+'XOXXOOOXX'	3
+'XOXOXO   '	6
+'XOXOXOX  '	2
+'XOXOXOOX '	6
+'XOXOXOXXO'	2
+'XOXOXOOXX'	2
+'XOXXXOO  '	10
+'XOXXXOOO '	6
+'XOXXXOOXO'	3
+'XOXXXOOOX'	2
+'XOXOOXX  '	5
+'XOXOOXXO '	1
+'XOXOOXXXO'	3
+'XOXOOXOXX'	2
+'XOXXOXO  '	5
+'XOXXOXOO '	1
+'XOXXOXOXO'	3
+'XOXOXXO  '	10
+'XOXOXXOO '	6
+'XOXOXXXOO'	2
+'XOXOXXOXO'	3
+'XOXOXXOOX'	2
+'OXX   XO '	13
+'OXX   XOO'	9
+'OXXO  X  '	18
+'OXXO  XO '	6
+'OXXO  XXO'	5
+'OXXO  XOX'	10
+'OXXX  O  '	18
+'OXXX  OO '	14
+'OXXX  XOO'	5
+'OXXX  OXO'	5
+'OXXX  OOX'	10
+'OXXOO X  '	14
+'OXXOO XX '	5
+'OXXOO XXO'	1
+'OXXOO XOX'	6
+'OXXXO    '	19
+'OXXXO O  '	14
+'OXXXO XO '	5
+'OXXXO OX '	5
+'OXXXO XOO'	1
+'OXXXO OXO'	1
+'OXXXO OOX'	6
+'OXXOX XO '	2
+'OXXXX OO '	5
+'OXXXX OOO'	1
+'OXXOOOXX '	1
+'OXXXOO   '	15
+'OXXXOOX  '	11
+'OXXXOOXO '	7
+'OXXXOOOX '	7
+'OXXXOOXOX'	3
+'OXXXOOOXX'	3
+'OXXOXOX  '	2
+'OXXOXOXOX'	2
+'OXXXXOO  '	11
+'OXXXXOOO '	7
+'OXXXXOXOO'	2
+'OXXXXOOOX'	3
+'OXXOOXX  '	10
+'OXXOOXXO '	6
+'OXXOOXXOX'	2
+'OXXXOXO  '	10
+'OXXXOXOO '	6
+'OXXXOXOOX'	2
+'OXXOXXXOO'	2
+'XXX   OO '	2
+'XXXO  O  '	2
+'XXXO  XOO'	2
+'XXXO  OXO'	2
+'XXXO  OOX'	2
+'XXXOO    '	2
+'XXXOO XO '	2
+'XXXOO OX '	2
+'XXXXO OO '	2
+'XXXOX OO '	2
+'XXXXOOO  '	2
+'XXXXOOOXO'	2
+'XXXXOOOOX'	2
+'XXXOXOO  '	2
+'XXXOXOXOO'	2
+'XXXOOXO  '	2
+'XXXOOXXOO'	2
+'XXXOOXOXO'	2
